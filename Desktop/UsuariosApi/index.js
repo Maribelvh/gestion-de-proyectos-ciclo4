@@ -1,0 +1,16 @@
+const mongoose = require ('mongoose')
+const app = require ('./app')
+const config = require ('./config')
+
+
+mongoose.connect (config.db, (err,res) => {   // Conexion a la base de datos shop= nombre de la BD que se va a  generar automatica/te
+    if (err) {
+        return console.log (`Error al conectar a la base de datos: ${err}` )
+    }
+    console.log('Conexión a la base de datos establecida....')
+
+    app.listen(config.port, () => {
+        console.log(`API REST corriendo en http://localhost:${config.port}`)
+    })
+})
+
