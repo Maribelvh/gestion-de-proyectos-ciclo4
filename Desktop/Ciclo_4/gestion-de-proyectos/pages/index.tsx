@@ -6,7 +6,7 @@ const Home: NextPage = () => {
   return (
     <div className = 'bg-red-500'> 
       
-      <p>Página de Index</p>
+      <p>Página de Index- Prueba dev</p>
       <Link href ='/admin/usuarios'>
       <a className='cursor-pointer'>Ir a admin usuarios</a>
       </Link>
